@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qplus.qplus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name=" android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
+    <uses-permission android:name="com.company.contentprovider.READ_DATABASE" />
+    <uses-permission android:name="com.company.contentprovider.WRITE_DATABASE" />
+    <uses-permission android:name="android.permissions.READ_DATABASE" />
+    <uses-permission android:name="android.permissioms.WRITE_DATABASE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/head_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 세로 스캔시 -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.qplus.qplus.MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.qplus.qplus.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.qplus.qplus.LoadingPageActivity" />
+        <activity android:name="com.qplus.qplus.ui.user.UpdatePassActivity" />
+        <activity android:name="com.qplus.qplus.ui.user.UpdateInfoActivity" />
+        <activity android:name="com.qplus.qplus.ui.home.QRcodeActivity" />
+        <activity android:name="com.qplus.qplus.ui.home.StampStatusActivity" />
+        <activity android:name="com.qplus.qplus.ui.home.StampCompleteActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketBuyActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketBuyCompleteActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketDonateActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketStoreActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketCafeActivity" />
+        <activity android:name="com.qplus.qplus.ui.market.MarketBakeryActivity" />
+        <activity
+            android:name="com.qplus.qplus.ui.market.MarketListBuyActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.qplus.qplus.SignActivity" />
+        <activity android:name="com.qplus.qplus.CouponActivity"/>
+        <activity android:name="com.qplus.qplus.ManagerMainActivity" />
+        <activity android:name="com.qplus.qplus.QRScanActivity" />
+        <activity android:name="com.qplus.qplus.ui.comunity.UpdateActivity" />
+        <activity android:name="com.qplus.qplus.ui.comunity.VolunteerUploadActivity"/>
+        <activity android:name="com.qplus.qplus.ui.comunity.SortingUploadActivity"/>
+    </application>
+
+</manifest>
